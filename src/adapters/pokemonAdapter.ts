@@ -1,9 +1,15 @@
-import { capitalize, getId, getImageUrl } from "../utils";
-import { Pokemon } from "./pokemonListAdapter";
+import { capitalize } from "../utils";
 
-export const pokemonAdapter = (pokemon: Pokemon) => ({
-  id: getId(pokemon.url),
+export type PokemonAdapter = {
+  id: string;
+  name: string;
+  img: string;
+  type: string;
+};
+
+export const pokemonAdapter = (pokemon: any): PokemonAdapter => ({
+  id: String(pokemon.id),
   name: capitalize(pokemon.name),
-  img: getImageUrl(pokemon.url),
-  type: "",
+  img: pokemon.sprites.front_default,
+  type: pokemon.types[0].type.name,
 });

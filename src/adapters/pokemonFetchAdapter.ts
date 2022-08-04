@@ -1,5 +1,3 @@
-import { pokemonAdapter } from "./pokemonAdapter";
-
 export type Pokemon = {
   name: string;
   url: string;
@@ -11,9 +9,8 @@ type PokemonList = {
   results: Pokemon[];
 };
 
-export const pokemonListAdapter = (pokemonList: PokemonList) => ({
+export const pokemonFetchDataAdapter = (pokemonList: PokemonList) => ({
   count: pokemonList.count,
   next: pokemonList.next,
   previus: pokemonList.previous,
-  results: pokemonList.results.map((pokemon) => pokemonAdapter(pokemon)),
 });

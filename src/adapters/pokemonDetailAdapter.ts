@@ -15,7 +15,7 @@ type Sprites = {
   front_shiny?: string;
   front_female?: string;
 };
-type PokeTypes = { slot: number; type: { name: string; url: string } }[];
+type PokeTypes = { type: { name: string; url: string }; slot: number }[];
 type Abilities = {
   ability: { name: string; url: string };
   is_hidden: boolean;

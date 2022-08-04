@@ -1,9 +1,20 @@
 import axios from "axios";
-import { pokemonListAdapter } from "../adapters/pokemonListAdapter";
+import { pokemonAdapter } from "../adapters/pokemonAdapter";
+import { pokemonFetchDataAdapter } from "../adapters/pokemonFetchAdapter";
 
-export const getPokemonList = async (url: string | null) => {
+export const getPokemonList = async (url: string) => {
   if (url === null) return;
-  const data = await axios.get(url);
-  const pokemonList = await pokemonListAdapter(data.data);
-  return pokemonList;
+  const { data } = await axios.get(url);
+  const navigationData = pokemonFetchDataAdapter(data);
+  const pokemonListPromises = await data.results.map(
+    async (pokemon: { name: string; url: string }) => {
+      const data = await axios.get(
+        `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
+      );
+      const pokeListDetailedAdapted = pokemonAdapter(data.data);
+      return pokeListDetailedAdapted;
+    }
+  );
+  const pokemonList = await Promise.all(pokemonListPromises);
+  return { results: pokemonList, ...navigationData };
 };
