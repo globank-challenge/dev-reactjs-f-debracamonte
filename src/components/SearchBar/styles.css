@@ -1,0 +1,29 @@
+.searchbar {
+  width: 100%;
+  max-width: 40vw;
+  height: 28px;
+  border: solid 1px rgb(83, 81, 81);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: white;
+}
+.searchbar__input {
+  border: none;
+  width: 100%;
+  background-color: transparent;
+}
+.searchbar__input:focus-visible {
+  outline: none;
+}
+.searchbar__icon {
+  margin: 0 4px;
+}
+.error {
+  color: red;
+  font-weight: bold;
+  height: 22px;
+  width: 100%;
+}
