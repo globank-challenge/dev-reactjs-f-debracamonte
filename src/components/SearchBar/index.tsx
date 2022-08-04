@@ -1,15 +1,10 @@
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import useSetPokemonDetail from "../../hooks/useSetPokemonDetail";
 import { RootState } from "../../redux/store";
 import "./styles.css";
-
-type Event = {
-  key?: string;
-  target: { value: SetStateAction<string> };
-};
-type SearchBarProps = { placeholder: string };
+import { Event, SearchBarProps } from "./types";
 
 const SearchBar = ({ placeholder }: SearchBarProps) => {
   const error = useSelector((state: RootState) => state.errorHandler);

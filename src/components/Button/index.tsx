@@ -1,13 +1,5 @@
-import React, { ReactElement } from "react";
 import "./styles.css";
-
-type ButtonProps = {
-  text: string;
-  disabled?: boolean;
-  onClick: () => void;
-  iconOnTheLeft?: boolean;
-  icon?: ReactElement<any, any>;
-};
+import { ButtonProps } from "./types";
 
 const Button = ({
   text,

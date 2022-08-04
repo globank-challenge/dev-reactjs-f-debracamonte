@@ -1,12 +1,7 @@
 import useSetPokemonDetail from "../../hooks/useSetPokemonDetail";
 import "./styles.css";
+import { CardProps } from "./types";
 
-export type CardProps = {
-  id: string;
-  name: string;
-  img: string;
-  type: string;
-};
 const Card = ({ id, name, img, type }: CardProps) => {
   const { setPokemonDetail } = useSetPokemonDetail();
   const onClickHandler = () => {

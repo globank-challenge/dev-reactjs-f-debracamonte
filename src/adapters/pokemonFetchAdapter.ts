@@ -1,13 +1,4 @@
-export type Pokemon = {
-  name: string;
-  url: string;
-};
-type PokemonList = {
-  count: number;
-  next: string;
-  previous: string | null;
-  results: Pokemon[];
-};
+import { PokemonList } from "./types";
 
 export const pokemonFetchDataAdapter = (pokemonList: PokemonList) => ({
   count: pokemonList.count,
