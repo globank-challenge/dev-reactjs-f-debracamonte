@@ -1,0 +1,26 @@
+.button {
+  width: 128px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(83, 136, 221);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+.button--disabled {
+  cursor: not-allowed;
+  background-color: rgba(83, 136, 221, 0.482);
+  color: rgba(255, 255, 255, 0.564);
+}
+.button-content {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 4px;
+}
+.button-content--icon-left {
+  flex-direction: row;
+}
