@@ -1,0 +1,128 @@
+.detailCard {
+  align-items: center;
+  background-color: #b6aaff;
+  border: solid 3px #8176c7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 16px;
+  width: 30%;
+}
+.detailCard__img {
+  height: 160px;
+  width: 240px;
+}
+.detailCard__sprites {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+}
+.detailCard__data {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.detailCard__sprite {
+  height: 70px;
+  width: 70px;
+}
+.detailCard__id {
+  font-size: 24px;
+  text-align: center;
+}
+.detailCard__name {
+  font-size: 24px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.detailCard__label {
+  font-size: 24px;
+  font-weight: 500;
+}
+.detailCard__info {
+  font-size: 14px;
+}
+.detailCard__mainData {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.detailCard__extraInfo {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 12px;
+}
+.normal {
+  background-color: #a8a77a;
+  border: solid 3px #6f6f4c;
+}
+.fire {
+  background-color: #ee8130;
+  border: solid 3px #a1571e;
+}
+.water {
+  background-color: #6390f0;
+  border: solid 3px #304b85;
+}
+.electric {
+  background-color: #f7d02c;
+  border: solid 3px #af911b;
+}
+.grass {
+  background-color: #7ac74c;
+  border: solid 3px #4a7c2e;
+}
+.ice {
+  background-color: #96d9d6;
+  border: solid 3px #4b7673;
+}
+.fighting {
+  background-color: #c22e28;
+  border: solid 3px #6b1e1b;
+}
+.poison {
+  background-color: #a33ea1;
+  border: solid 3px #662265;
+}
+.ground {
+  background-color: #e2bf65;
+  border: solid 3px #8b753c;
+}
+.flying {
+  background-color: #a98ff3;
+  border: solid 3px #624f97;
+}
+.psychic {
+  background-color: #f95587;
+  border: solid 3px #8b324d;
+}
+.bug {
+  background-color: #626d15;
+  border: solid 3px #a6b91a;
+}
+.rock {
+  background-color: #b6a136;
+  border: solid 3px#77681f;
+}
+.ghost {
+  background-color: #735797;
+  border: solid 3px #46335f;
+}
+.dragon {
+  background-color: #6f35fc;
+  border: solid 3px #3d2182;
+}
+.dark {
+  background-color: #705746;
+  border: solid 3px #4f3b2e;
+}
+.steel {
+  background-color: #b7b7ce;
+  border: solid 3px #71718a;
+}
+.fairy {
+  background-color: #864a68;
+  border: solid 3px #d685ad;
+}
