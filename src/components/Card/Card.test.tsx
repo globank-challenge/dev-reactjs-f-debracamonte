@@ -2,7 +2,7 @@ import { screen } from "@testing-library/react";
 import Card from ".";
 import { render } from "../../utils/testUtils";
 
-describe("when card renders", () => {
+describe("<Card />>", () => {
   const pokeName = "Boulbasaur";
   const pokeId = "1";
   const pokeImg = "Boulbasaur";

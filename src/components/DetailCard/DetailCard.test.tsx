@@ -2,7 +2,7 @@ import { screen } from "@testing-library/react";
 import DetailCard from ".";
 import { render } from "../../utils/testUtils";
 
-describe("when detail cards mounts", () => {
+describe("<DetailCard />", () => {
   const testData = {
     id: "92",
     name: "Gastly",

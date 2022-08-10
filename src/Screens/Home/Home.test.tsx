@@ -2,31 +2,9 @@ import { screen, fireEvent, waitFor } from "@testing-library/react";
 import { rest } from "msw";
 import { setupServer } from "msw/node";
 import Home from ".";
+import { fakeResponse } from "../../utils";
 import { render } from "../../utils/testUtils";
 
-const fakeResponse = {
-  count: 1154,
-  next: "https://pokeapi.co/api/v2/pokemon?offset=4&limit=4",
-  previous: null,
-  results: [
-    {
-      name: "Bulbasaur",
-      url: "https://pokeapi.co/api/v2/pokemon/1/",
-    },
-    {
-      name: "Ivysaur",
-      url: "https://pokeapi.co/api/v2/pokemon/2/",
-    },
-    {
-      name: "Venusaur",
-      url: "https://pokeapi.co/api/v2/pokemon/3/",
-    },
-    {
-      name: "Charmander",
-      url: "https://pokeapi.co/api/v2/pokemon/4/",
-    },
-  ],
-};
 const server = setupServer(
   rest.get("/api/v2/pokemon", (req, res, ctx) => {
     return res(ctx.json(fakeResponse), ctx.status(200));
@@ -40,7 +18,7 @@ afterEach(() => server.resetHandlers());
 
 afterAll(() => server.close());
 
-describe("when the app loads", () => {
+describe("<Home />", () => {
   test("should show the first four pokemon", () => {
     render(<Home />);
     const first = screen.getByText(fakeResponse.results[0].name);

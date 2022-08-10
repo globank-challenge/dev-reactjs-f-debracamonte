@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import { render } from "../../utils/testUtils";
 import SearchBar from "./";
 
-describe("When searchBar renders", () => {
+describe("<SearchBar />", () => {
   const placeholder = "Buscar";
   test("should render", () => {
     render(<SearchBar placeholder={placeholder} />);
