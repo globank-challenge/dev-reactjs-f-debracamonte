@@ -4,7 +4,7 @@ import { render } from "../../utils/testUtils";
 describe("<Header />", () => {
   test("should render the title", () => {
     render(<Header />);
-    const title = screen.getByText(/listado de pokemon/i);
+    const title = screen.getByRole("heading", { name: /listado de pokemon/i });
     expect(title).toBeInTheDocument();
   });
   test("should render the searchBar", () => {
