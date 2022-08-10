@@ -15,17 +15,15 @@ const Footer = () => {
     <footer className="footer">
       <Button
         onClick={() => previusPageHandler()}
-        text="Anterior"
         disabled={itsPreviusDisabled()}
-        icon={<AiOutlineLeft />}
-        iconOnTheLeft
-      />
-      <Button
-        onClick={() => nextPageHandler()}
-        disabled={itsNextDisabled()}
-        text="Siguiente"
-        icon={<AiOutlineRight />}
-      />
+      >
+        <AiOutlineLeft />
+        {"Anterior"}
+      </Button>
+      <Button onClick={() => nextPageHandler()} disabled={itsNextDisabled()}>
+        Siguiente
+        <AiOutlineRight />
+      </Button>
     </footer>
   );
 };

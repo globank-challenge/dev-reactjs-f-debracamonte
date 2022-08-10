@@ -5,18 +5,22 @@ import { render } from "../../utils/testUtils";
 describe("<Button />", () => {
   const mockOnClick = jest.fn();
   test("should render", () => {
-    render(<Button text="Example" onClick={mockOnClick} />);
+    render(<Button onClick={mockOnClick}>Example</Button>);
     const button = screen.getByRole("button");
     expect(button).toBeInTheDocument();
   });
   test("should call the onClick function when click", () => {
-    render(<Button onClick={mockOnClick} text="Example" />);
+    render(<Button onClick={mockOnClick}>Example</Button>);
     const button = screen.getByRole("button");
     fireEvent.click(button);
     expect(mockOnClick).toHaveBeenCalled();
   });
   test("should not call the onClick function when click a disabled button", () => {
-    render(<Button onClick={mockOnClick} disabled text="Example" />);
+    render(
+      <Button onClick={mockOnClick} disabled>
+        Example
+      </Button>
+    );
     const button = screen.getByRole("button");
     fireEvent.click(button);
     expect(mockOnClick).not.toHaveBeenCalled();
@@ -24,7 +28,7 @@ describe("<Button />", () => {
   });
   test("should shows the correct text", () => {
     const text = "Siguiente";
-    render(<Button onClick={mockOnClick} disabled text={text} />);
+    render(<Button onClick={mockOnClick}>{text}</Button>);
     const button = screen.getByText(text);
     expect(button).toBeInTheDocument();
   });
@@ -32,7 +36,10 @@ describe("<Button />", () => {
     const text = "Siguiente";
     const mockIcon = <span>P</span>;
     render(
-      <Button onClick={mockOnClick} disabled text={text} icon={mockIcon} />
+      <Button onClick={mockOnClick}>
+        {text}
+        {mockIcon}
+      </Button>
     );
     const button = screen.getByText("P");
     expect(button).toBeInTheDocument();

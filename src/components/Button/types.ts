@@ -1,9 +1,7 @@
-import { ReactElement } from "react";
+import { ReactNode } from "react";
 
 export type ButtonProps = {
-  text: string;
+  children: ReactNode;
   disabled?: boolean;
   onClick: () => void;
-  iconOnTheLeft?: boolean;
-  icon?: ReactElement<any, any>;
 };
