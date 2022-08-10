@@ -1,7 +1,9 @@
-import { PokemonList } from "./types";
+import { PokemonFetch, pokemonNavigation } from "./types";
 
-export const pokemonFetchDataAdapter = (pokemonList: PokemonList) => ({
-  count: pokemonList.count,
-  next: pokemonList.next,
-  previus: pokemonList.previous,
+export const pokemonFetchDataAdapter = (
+  pokemonFetch: PokemonFetch
+): pokemonNavigation => ({
+  count: pokemonFetch.count,
+  next: pokemonFetch.next,
+  previus: pokemonFetch.previous,
 });

@@ -1,7 +1,9 @@
 import { capitalize } from "../utils";
-import { PokemonDetail } from "./types";
+import { PokemonDetail, PokemonDetailAdapted } from "./types";
 
-export const pokemonDetailAdapter = (pokemon: PokemonDetail) => ({
+export const pokemonDetailAdapter = (
+  pokemon: PokemonDetail
+): PokemonDetailAdapted => ({
   id: String(pokemon.id),
   name: capitalize(pokemon.name),
   sprites: [

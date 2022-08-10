@@ -1,9 +1,11 @@
 import { capitalize } from "../utils";
-import { PokemonAdapter } from "./types";
+import { PokemonAdapted, PokemonAdapterProps } from "./types";
 
-export const pokemonAdapter = (pokemon: any): PokemonAdapter => ({
+export const pokemonAdapter = (
+  pokemon: PokemonAdapterProps
+): PokemonAdapted => ({
   id: String(pokemon.id),
   name: capitalize(pokemon.name),
-  img: pokemon.sprites.front_default,
+  img: pokemon.sprites.front_default || "",
   type: pokemon.types[0].type.name,
 });
