@@ -1,23 +1,37 @@
-export type PokemonAdapter = {
+export type PokemonAdapterProps = {
+  id: number;
+  name: string;
+  sprites: Sprites;
+  types: PokeTypes;
+};
+export type PokemonAdapted = {
   id: string;
   name: string;
   img: string;
   type: string;
 };
 export type PokemonDetail = {
-  id: string;
+  id: number;
   name: string;
   sprites: Sprites;
   types: PokeTypes;
-  weight: string;
+  weight: number;
   abilities: Abilities;
 };
+export type PokemonDetailAdapted = {
+  id: string;
+  name: string;
+  sprites: (string | undefined | null)[];
+  types: string[];
+  weight: string;
+  abilities: string[];
+};
 type Sprites = {
-  front_default: string;
-  back_default?: string;
-  back_shiny?: string;
-  front_shiny?: string;
-  front_female?: string;
+  front_default: string | null;
+  back_default?: string | null;
+  back_shiny?: string | null;
+  front_shiny?: string | null;
+  front_female?: string | null;
 };
 type PokeTypes = { type: { name: string; url: string }; slot: number }[];
 type Abilities = {
@@ -30,9 +44,14 @@ export type Pokemon = {
   name: string;
   url: string;
 };
-export type PokemonList = {
+export type PokemonFetch = {
   count: number;
   next: string;
   previous: string | null;
   results: Pokemon[];
+};
+export type pokemonNavigation = {
+  count: number;
+  next: string | null;
+  previus: string | null;
 };
