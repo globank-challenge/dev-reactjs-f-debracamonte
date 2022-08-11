@@ -5,15 +5,14 @@
   background-position: 10px;
   background-size: 40px 40px;
   display: grid;
-  height: 100%;
   opacity: 0.8;
-  padding: 36px 42px;
+  padding: 21px 42px;
   row-gap: 24px;
 }
 
 .pokeHome-body {
   display: flex;
   gap: 24px;
-  height: calc(100vh - 260px);
+  min-height: calc(100vh - 280px);
   justify-content: space-between;
 }
