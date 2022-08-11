@@ -15,7 +15,6 @@ const useSetPokemonDetail = () => {
       dispatch(setisActive(true));
       dispatch(setError(false));
     } catch (error) {
-      console.log(error);
       dispatch(setError(true));
     }
   };
