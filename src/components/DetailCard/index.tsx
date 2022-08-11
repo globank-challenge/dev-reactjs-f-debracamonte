@@ -10,7 +10,7 @@ const DetailCard = () => {
     <div className={`detailCard ${types[0]}`}>
       <img
         src={sprites[0]}
-        alt="default front sprite"
+        alt={`${name} front sprite`}
         className="detailCard__img"
       />
       <div className="detailCard__mainData">
