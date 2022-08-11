@@ -1,6 +1,7 @@
 import axios from "axios";
 import { pokemonAdapter } from "../adapters/pokemonAdapter";
 import { pokemonFetchDataAdapter } from "../adapters/pokemonFetchAdapter";
+import { baseUrl } from "../env";
 
 export const getPokemonList = async (url: string) => {
   if (url === null) return;
@@ -8,9 +9,7 @@ export const getPokemonList = async (url: string) => {
   const navigationData = pokemonFetchDataAdapter(data);
   const pokemonListPromises = await data.results.map(
     async (pokemon: { name: string; url: string }) => {
-      const data = await axios.get(
-        `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
-      );
+      const data = await axios.get(`${baseUrl}/pokemon/${pokemon.name}`);
       const pokeListDetailedAdapted = pokemonAdapter(data.data);
       return pokeListDetailedAdapted;
     }
