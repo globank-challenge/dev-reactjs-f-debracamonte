@@ -10,10 +10,13 @@ const useSetPokemonList = () => {
 
   const itsDisabled = (name: string) => {
     let pokelink;
-    if (name === "next") pokelink = pokeList.next;
-    if (name === "previous") pokelink = pokeList.previus;
-    if (pokelink) return false;
-    if (pokeList.loading) return false;
+    if (name === "next") {
+      pokelink = pokeList.next;
+    }
+    if (name === "previous") {
+      pokelink = pokeList.previus;
+    }
+    if (pokelink !== null && !pokeList.loading) return false;
     return true;
   };
 
