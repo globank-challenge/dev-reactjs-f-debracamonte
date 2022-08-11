@@ -1,13 +1,13 @@
 .loading {
-  width: 100vw;
+  align-items: center;
+  background-color: red;
+  display: flex;
+  font-size: 46px;
   height: 100vh;
+  justify-content: center;
+  opacity: 38%;
   position: fixed;
   top: 0;
-  background-color: red;
+  width: 100vw;
   z-index: 9;
-  opacity: 38%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 46px;
 }

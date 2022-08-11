@@ -1,21 +1,21 @@
 .button {
-  width: 128px;
-  height: 42px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  border: none;
-  border-radius: 6px;
   background-color: rgb(83, 136, 221);
+  border-radius: 6px;
+  border: none;
   color: white;
   cursor: pointer;
+  display: flex;
   font-weight: bold;
   gap: 4px;
+  height: 42px;
+  justify-content: center;
+  width: 128px;
 }
 .button--disabled {
-  cursor: not-allowed;
   background-color: rgba(83, 136, 221, 0.482);
   color: rgba(255, 255, 255, 0.564);
+  cursor: not-allowed;
 }
 .button-content {
   display: flex;
