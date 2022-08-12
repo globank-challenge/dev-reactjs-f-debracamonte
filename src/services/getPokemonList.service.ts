@@ -2,8 +2,9 @@ import axios from "axios";
 import { pokemonAdapter } from "../adapters/pokemonAdapter";
 import { pokemonFetchDataAdapter } from "../adapters/pokemonFetchAdapter";
 import { baseUrl } from "../env";
+import { PokemonList } from "./types";
 
-export const getPokemonList = async (url: string) => {
+export const getPokemonList = async (url: string): Promise<PokemonList> => {
   if (url === null) return;
   const { data } = await axios.get(url);
   const navigationData = pokemonFetchDataAdapter(data);
