@@ -3,9 +3,9 @@ import { RootState } from "../../redux/store";
 import "./styles.css";
 
 const DetailCard = () => {
-  const pokeDetail = useSelector((state: RootState) => state.pokemonDetail);
-
-  const { id, name, types, weight, sprites, abilities } = pokeDetail;
+  const { id, name, types, weight, sprites, abilities } = useSelector(
+    (state: RootState) => state.pokemonDetail
+  );
   return (
     <div className={`detailCard ${types[0]}`}>
       <img
@@ -17,7 +17,6 @@ const DetailCard = () => {
         <span className="detailCard__id"># {id}</span>
         <p className="detailCard__name">{name}</p>
       </div>
-
       <div className="detailCard__extraInfo">
         <div className="detailCard__data">
           <p className="detailCard__label">Types</p>
