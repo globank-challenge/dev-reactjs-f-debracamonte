@@ -1,4 +1,4 @@
-import { fakeResponse } from "../utils";
+import { fakeResponse } from "../utils/mockData";
 import { pokemonAdapter } from "./pokemonAdapter";
 import { pokemonDetailAdapter } from "./pokemonDetailAdapter";
 import { pokemonFetchDataAdapter } from "./pokemonFetchAdapter";

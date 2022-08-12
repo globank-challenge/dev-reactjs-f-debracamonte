@@ -33,27 +33,3 @@ export const colours = {
   steel: "#B7B7CE",
   fairy: "#D685AD",
 };
-
-export const fakeResponse = {
-  count: 1154,
-  next: "https://pokeapi.co/api/v2/pokemon?offset=4&limit=4",
-  previous: null,
-  results: [
-    {
-      name: "Bulbasaur",
-      url: "https://pokeapi.co/api/v2/pokemon/1/",
-    },
-    {
-      name: "Ivysaur",
-      url: "https://pokeapi.co/api/v2/pokemon/2/",
-    },
-    {
-      name: "Venusaur",
-      url: "https://pokeapi.co/api/v2/pokemon/3/",
-    },
-    {
-      name: "Charmander",
-      url: "https://pokeapi.co/api/v2/pokemon/4/",
-    },
-  ],
-};

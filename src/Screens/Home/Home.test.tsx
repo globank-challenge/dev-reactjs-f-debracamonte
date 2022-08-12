@@ -2,9 +2,10 @@ import { screen, fireEvent, waitFor } from "@testing-library/react";
 import { rest } from "msw";
 import { setupServer } from "msw/node";
 import Home from ".";
-import { fakeResponse } from "../../utils";
+
 import { render } from "../../utils/testUtils";
 import userEvent from "@testing-library/user-event";
+import { fakeResponse } from "../../utils/mockData";
 
 const server = setupServer(
   rest.get("/api/v2/pokemon", (req, res, ctx) => {
