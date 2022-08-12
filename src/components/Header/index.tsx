@@ -1,7 +1,9 @@
 import "./styles.css";
 import SearchBar from "../SearchBar";
+import useSetPokemonDetail from "../../hooks/useSetPokemonDetail";
 
 const Header = () => {
+  const { setPokemonDetail } = useSetPokemonDetail();
   return (
     <header className="header">
       <div>
@@ -10,7 +12,10 @@ const Header = () => {
           Dale click a tu pokemon favorito y mira su información
         </h2>
       </div>
-      <SearchBar placeholder="Prueba buscando el nombre de tu pokemon favorito" />
+      <SearchBar
+        placeholder="Prueba buscando el nombre de tu pokemon favorito"
+        onSearch={setPokemonDetail}
+      />
     </header>
   );
 };

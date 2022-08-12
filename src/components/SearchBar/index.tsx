@@ -1,14 +1,10 @@
 import { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
-import { useSelector } from "react-redux";
-import useSetPokemonDetail from "../../hooks/useSetPokemonDetail";
-import { RootState } from "../../redux/store";
+import ErrorMessage from "../ErrorMessage";
 import "./styles.css";
 import { Event, SearchBarProps } from "./types";
 
-const SearchBar = ({ placeholder }: SearchBarProps) => {
-  const error = useSelector((state: RootState) => state.errorHandler);
-  const { setPokemonDetail } = useSetPokemonDetail();
+const SearchBar = ({ placeholder, onSearch }: SearchBarProps) => {
   const [inputValue, setInputValue] = useState("");
 
   const onChangeHandler = (e: Event) => {
@@ -16,7 +12,7 @@ const SearchBar = ({ placeholder }: SearchBarProps) => {
   };
   const onEnterHandler = (event: Event) => {
     if (event.key === "Enter") {
-      setPokemonDetail(inputValue.toLowerCase());
+      onSearch(inputValue.toLowerCase());
       setInputValue("");
     }
   };
@@ -35,9 +31,7 @@ const SearchBar = ({ placeholder }: SearchBarProps) => {
           onKeyDown={onEnterHandler}
         />
       </div>
-      <span className="searchbar__error">
-        {error && "Ese pokemon no existe (aún) intentalo otra vez!"}
-      </span>
+      <ErrorMessage message="Ese pokemon no existe (aún) intentalo otra vez!" />
     </>
   );
 };
