@@ -1,21 +1,11 @@
-import { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
+import useSetPokemonDetail from "../../hooks/useSetPokemonDetail";
 import ErrorMessage from "../ErrorMessage";
 import "./styles.css";
-import { Event, SearchBarProps } from "./types";
+import { SearchBarProps } from "./types";
 
 const SearchBar = ({ placeholder, onSearch }: SearchBarProps) => {
-  const [inputValue, setInputValue] = useState("");
-
-  const onChangeHandler = (e: Event) => {
-    setInputValue(e.target.value);
-  };
-  const onEnterHandler = (event: Event) => {
-    if (event.key === "Enter") {
-      onSearch(inputValue.toLowerCase());
-      setInputValue("");
-    }
-  };
+  const { inputValue, onChangeHandler, onEnterHandler } = useSetPokemonDetail();
   return (
     <>
       <div className="searchbar">
@@ -27,8 +17,8 @@ const SearchBar = ({ placeholder, onSearch }: SearchBarProps) => {
           type="text"
           placeholder={placeholder}
           value={inputValue}
-          onChange={onChangeHandler}
-          onKeyDown={onEnterHandler}
+          onChange={(e) => onChangeHandler(e)}
+          onKeyDown={(e) => onEnterHandler(e, onSearch)}
         />
       </div>
       <ErrorMessage message="Ese pokemon no existe (aún) intentalo otra vez!" />

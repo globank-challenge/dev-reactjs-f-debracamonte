@@ -1,4 +1,4 @@
-import { SetStateAction } from "react";
+import { SetStateAction, KeyboardEvent } from "react";
 
 export type Event = {
   key?: string;
@@ -6,5 +6,5 @@ export type Event = {
 };
 export type SearchBarProps = {
   placeholder: string;
-  onSearch: (id: string) => void;
+  onSearch: (pokemonName: string) => void;
 };
