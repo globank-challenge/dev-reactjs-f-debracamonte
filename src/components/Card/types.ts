@@ -3,4 +3,5 @@ export type CardProps = {
   name: string;
   img: string;
   type: string;
+  onClick: () => void;
 };
