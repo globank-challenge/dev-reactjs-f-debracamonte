@@ -21,9 +21,10 @@
 .searchbar__icon {
   margin: 0 4px;
 }
-.error {
+.searchbar__error {
   color: red;
   font-weight: bold;
   height: 22px;
+  text-align: start;
   width: 100%;
 }

@@ -5,6 +5,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 480px;
+  padding: 0 32px;
   width: 30%;
 }
 .detailCard__img {
@@ -53,7 +55,6 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 0 12px;
 }
 .normal {
   background-color: #a8a77a;

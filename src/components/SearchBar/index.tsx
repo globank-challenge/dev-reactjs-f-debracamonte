@@ -35,7 +35,7 @@ const SearchBar = ({ placeholder }: SearchBarProps) => {
           onKeyDown={onEnterHandler}
         />
       </div>
-      <span className="error">
+      <span className="searchbar__error">
         {error && "Ese pokemon no existe (aún) intentalo otra vez!"}
       </span>
     </>
