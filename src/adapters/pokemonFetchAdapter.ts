@@ -1,8 +1,8 @@
-import { PokemonFetch, pokemonNavigation } from "./types";
+import { PokemonFetch, PokemonNavigation } from "./types";
 
 export const pokemonFetchDataAdapter = (
   pokemonFetch: PokemonFetch
-): pokemonNavigation => ({
+): PokemonNavigation => ({
   count: pokemonFetch.count,
   next: pokemonFetch.next,
   previus: pokemonFetch.previous,

@@ -50,7 +50,7 @@ export type PokemonFetch = {
   previous: string | null;
   results: Pokemon[];
 };
-export type pokemonNavigation = {
+export type PokemonNavigation = {
   count: number;
   next: string | null;
   previus: string | null;
