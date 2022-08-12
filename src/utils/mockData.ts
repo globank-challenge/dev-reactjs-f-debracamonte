@@ -35,3 +35,35 @@ export const fakePokemonDetailAdapted = {
   types: ["poison"],
   weight: "69",
 };
+
+export const mockNavigationData = {
+  count: 1154,
+  next: "https://pokeapi.co/api/v2/pokemon?offset=4&limit=4",
+  previus: null,
+};
+export const mockResultData = [
+  {
+    id: "23",
+    name: "Ekans",
+    img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png",
+    type: "poison",
+  },
+  {
+    id: "24",
+    name: "Arbok",
+    img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png",
+    type: "poison",
+  },
+  {
+    id: "25",
+    name: "Pikachu",
+    img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+    type: "electric",
+  },
+  {
+    id: "26",
+    name: "Raichu",
+    img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
+    type: "electric",
+  },
+];
