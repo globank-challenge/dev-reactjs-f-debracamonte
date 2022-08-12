@@ -19,10 +19,10 @@ const initialState: pokemonListState = {
   next: null,
   previus: null,
   results: [
-    { id: "1", name: "Bulbasaur", img: "", type: "" },
-    { id: "2", name: "Ivysaur", img: "", type: "" },
-    { id: "3", name: "Venusaur", img: "", type: "" },
-    { id: "4", name: "Charmander", img: "", type: "" },
+    { id: "1", name: "", img: "", type: "" },
+    { id: "2", name: "", img: "", type: "" },
+    { id: "3", name: "", img: "", type: "" },
+    { id: "4", name: "", img: "", type: "" },
   ],
 };
 
