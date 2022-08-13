@@ -4,7 +4,7 @@ import ErrorMessage from "../ErrorMessage";
 import "./styles.css";
 import { SearchBarProps } from "./types";
 
-const SearchBar = ({ placeholder, onSearch }: SearchBarProps) => {
+const SearchBar = ({ placeholder, onSearch }: SearchBarProps): JSX.Element => {
   const { inputValue, onChangeHandler, onEnterHandler } = useSetPokemonDetail();
   return (
     <>

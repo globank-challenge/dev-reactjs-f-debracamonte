@@ -3,7 +3,7 @@ import "./styles.css";
 import Button from "../Button";
 import useSetPokemonList from "../../hooks/useSetPokemonList";
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
   const { previusPageHandler, nextPageHandler, itsDisabled } =
     useSetPokemonList();
 

@@ -10,28 +10,30 @@ const useSetPokemonDetail = () => {
   const [inputValue, setInputValue] = useState("");
   const pokeList = useSelector((state: RootState) => state.pokemonList);
 
-  const onChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
+  const onChangeHandler = (event: ChangeEvent<HTMLInputElement>): void => {
     setInputValue(event.target.value);
   };
 
   const onEnterHandler = (
     event: { key: string },
     onSearch: (pokemonName: string) => void
-  ) => {
+  ): void => {
     if (event.key === "Enter") {
       onSearch(inputValue.toLowerCase());
       setInputValue("");
     }
   };
 
-  const setPokemonDetail = async (id: string) => {
+  const setPokemonDetail = async (id: string): Promise<void> => {
     try {
       const pokemonDetail = await getPokemonDetail(
         `https://pokeapi.co/api/v2/pokemon/${id}`
       );
-      dispatch(setCurrentPokemon(pokemonDetail));
-      dispatch(setisActive(true));
-      dispatch(setError(false));
+      if (pokemonDetail) {
+        dispatch(setCurrentPokemon(pokemonDetail));
+        dispatch(setisActive(true));
+        dispatch(setError(false));
+      }
     } catch (error) {
       dispatch(setError(true));
     }

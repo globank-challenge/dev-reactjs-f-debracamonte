@@ -2,14 +2,14 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import "./styles.css";
 
-const DetailCard = () => {
+const DetailCard = (): JSX.Element => {
   const { id, name, types, weight, sprites, abilities } = useSelector(
     (state: RootState) => state.pokemonDetail
   );
   return (
     <div className={`detailCard ${types[0]}`}>
       <img
-        src={sprites[0]}
+        src={sprites[0] as string}
         alt={`${name} front sprite`}
         className="detailCard__img"
       />
@@ -33,7 +33,7 @@ const DetailCard = () => {
               .filter((sprite) => sprite !== null)
               .map((sprite) => (
                 <img
-                  src={sprite}
+                  src={sprite as string}
                   className="detailCard__sprite"
                   key={sprite}
                   alt="sprite"

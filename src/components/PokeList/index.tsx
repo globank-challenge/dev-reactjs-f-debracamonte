@@ -3,7 +3,7 @@ import Card from "../Card";
 
 import useSetPokemonDetail from "../../hooks/useSetPokemonDetail";
 
-const PokeList = () => {
+const PokeList = (): JSX.Element => {
   const { setPokemonDetail, pokeList } = useSetPokemonDetail();
   return (
     <div className="pokeList">

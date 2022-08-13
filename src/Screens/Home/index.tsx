@@ -8,7 +8,7 @@ import useSetPokemonList from "../../hooks/useSetPokemonList";
 import { RootState } from "../../redux/store";
 import { useSelector } from "react-redux";
 
-const Home = () => {
+const Home = (): JSX.Element => {
   const { useInitPokemonList } = useSetPokemonList();
   const isActive = useSelector(
     (state: RootState) => state.pokemonDetail.active

@@ -1,7 +1,7 @@
 import "./styles.css";
 import { ButtonProps } from "./types";
 
-const Button = ({ children, disabled, onClick }: ButtonProps) => {
+const Button = ({ children, disabled, onClick }: ButtonProps): JSX.Element => {
   return (
     <button
       onClick={() => onClick()}

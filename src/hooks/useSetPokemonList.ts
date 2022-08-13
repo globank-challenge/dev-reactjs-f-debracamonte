@@ -8,7 +8,7 @@ const useSetPokemonList = () => {
   const pokeList = useSelector((state: RootState) => state.pokemonList);
   const dispatch = useDispatch();
 
-  const itsDisabled = (name: string) => {
+  const itsDisabled = (name: string): boolean => {
     let pokelink;
     if (name === "next") {
       pokelink = pokeList.next;
@@ -20,7 +20,7 @@ const useSetPokemonList = () => {
     return true;
   };
 
-  const nextPageHandler = async () => {
+  const nextPageHandler = async (): Promise<void> => {
     dispatch(setLoading(true));
     if (pokeList.next) {
       const data = await getPokemonList(pokeList.next);
@@ -29,7 +29,7 @@ const useSetPokemonList = () => {
     dispatch(setLoading(false));
   };
 
-  const previusPageHandler = async () => {
+  const previusPageHandler = async (): Promise<void> => {
     dispatch(setLoading(true));
     if (pokeList.previus) {
       const data = await getPokemonList(pokeList.previus);
@@ -38,7 +38,7 @@ const useSetPokemonList = () => {
     dispatch(setLoading(false));
   };
 
-  const useInitPokemonList = () => {
+  const useInitPokemonList = (): void => {
     useEffect(() => {
       getPokemonList("https://pokeapi.co/api/v2/pokemon?offset=0&limit=4").then(
         (response) => dispatch(setCurrentList(response))

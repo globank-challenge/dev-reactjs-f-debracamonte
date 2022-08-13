@@ -2,7 +2,7 @@ import "./styles.css";
 import SearchBar from "../SearchBar";
 import useSetPokemonDetail from "../../hooks/useSetPokemonDetail";
 
-const Header = () => {
+const Header = (): JSX.Element => {
   const { setPokemonDetail } = useSetPokemonDetail();
   return (
     <header className="header">

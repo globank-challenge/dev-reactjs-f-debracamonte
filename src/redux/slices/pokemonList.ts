@@ -1,4 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { PokemonList } from "../../services/types";
 
 export interface pokemonListState {
   loading: boolean;
@@ -30,8 +31,14 @@ export const pokemonListSlice = createSlice({
   name: "pokemonList",
   initialState,
   reducers: {
-    setCurrentList: (state, action) => ({ ...state, ...action.payload }),
-    setLoading: (state, action) => ({ ...state, loading: action.payload }),
+    setCurrentList: (state, action: PayloadAction<PokemonList>) => ({
+      ...state,
+      ...action.payload,
+    }),
+    setLoading: (state, action: PayloadAction<boolean>) => ({
+      ...state,
+      loading: action.payload,
+    }),
   },
 });
 

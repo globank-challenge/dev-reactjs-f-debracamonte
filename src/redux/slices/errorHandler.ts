@@ -6,7 +6,7 @@ export const errorHandlerSlice = createSlice({
   name: "errorHandler",
   initialState,
   reducers: {
-    setError: (state, action) => action.payload,
+    setError: (state, action: { payload: boolean }) => action.payload,
   },
 });
 

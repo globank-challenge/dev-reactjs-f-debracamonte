@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import pokeball from "../../assets/pokeball.png";
 
-const Loading = () => {
+const Loading = (): JSX.Element => {
   const isLoading = useSelector(
     (state: RootState) => state.pokemonList.loading
   );
