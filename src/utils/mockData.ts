@@ -33,6 +33,7 @@ export const fakePokemonDetailAdapted = {
     null,
   ],
   types: ["poison"],
+  abilities: ["intimidate", "shed-skin", "unnerve"],
   weight: "69",
 };
 
