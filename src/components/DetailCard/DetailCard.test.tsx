@@ -4,6 +4,7 @@ import { setCurrentPokemon } from "../../redux/slices/pokemonDetails";
 import { setupStore } from "../../redux/store";
 import { render } from "../../utils/testUtils";
 import { fakePokemonDetailAdapted as mockData } from "../../utils/mockData";
+
 describe("<DetailCard />", () => {
   const store = setupStore();
   store.dispatch(setCurrentPokemon(mockData));

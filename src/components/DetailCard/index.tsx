@@ -31,11 +31,11 @@ const DetailCard = (): JSX.Element => {
           <div className="detailCard__sprites">
             {sprites
               .filter((sprite) => sprite !== null)
-              .map((sprite) => (
+              .map((sprite, index) => (
                 <img
                   src={sprite as string}
                   className="detailCard__sprite"
-                  key={sprite}
+                  key={`${sprite} ${index}`}
                   alt="sprite"
                 />
               ))}
