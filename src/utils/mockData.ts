@@ -22,6 +22,83 @@ export const fakeResponse = {
   ],
 };
 
+export const fakeResponseAdapted = {
+  count: 1154,
+  next: "https://pokeapi.co/api/v2/pokemon?offset=4&limit=4",
+  previus: null,
+};
+
+export const fakePokemon = {
+  id: 23,
+  name: "ekans",
+  sprites: {
+    front_default:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png",
+  },
+  types: [{ type: { name: "poison", url: "url" }, slot: 1 }],
+};
+
+export const fakePoekonAdapted = {
+  id: "23",
+  name: "Ekans",
+  img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png",
+  type: "poison",
+};
+
+export const mockGetPokemonDetail = {
+  abilities: [
+    {
+      ability: {
+        name: "intimidate",
+        url: "https://pokeapi.co/api/v2/ability/22/",
+      },
+      is_hidden: false,
+      slot: 1,
+    },
+    {
+      ability: {
+        name: "shed-skin",
+        url: "https://pokeapi.co/api/v2/ability/61/",
+      },
+      is_hidden: false,
+      slot: 2,
+    },
+    {
+      ability: {
+        name: "unnerve",
+        url: "https://pokeapi.co/api/v2/ability/127/",
+      },
+      is_hidden: true,
+      slot: 3,
+    },
+  ],
+  id: 23,
+  name: "ekans",
+  sprites: {
+    back_default:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/23.png",
+    back_female: null,
+    back_shiny:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/23.png",
+    back_shiny_female: null,
+    front_default:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png",
+    front_female: null,
+    front_shiny:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/23.png",
+    front_shiny_female: null,
+  },
+  types: [
+    {
+      slot: 1,
+      type: {
+        name: "poison",
+        url: "https://pokeapi.co/api/v2/type/4/",
+      },
+    },
+  ],
+  weight: 69,
+};
 export const fakePokemonDetailAdapted = {
   id: "23",
   name: "Ekans",
