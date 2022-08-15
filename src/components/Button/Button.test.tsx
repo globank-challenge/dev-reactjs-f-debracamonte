@@ -4,7 +4,7 @@ import { render } from "../../utils/testUtils";
 
 describe("<Button />", () => {
   const mockOnClick = jest.fn();
-  test("should render", () => {
+  test("should display the button", () => {
     render(<Button onClick={mockOnClick}>Example</Button>);
     const button = screen.getByRole("button", { name: /example/i });
     expect(button).toBeInTheDocument();
@@ -26,13 +26,13 @@ describe("<Button />", () => {
     expect(mockOnClick).not.toHaveBeenCalled();
     expect(button).toBeDisabled();
   });
-  test("should shows the correct text", () => {
+  test("should displays the correct text", () => {
     const text = "Siguiente";
     render(<Button onClick={mockOnClick}>{text}</Button>);
     const button = screen.getByRole("button", { name: text });
     expect(button).toBeInTheDocument();
   });
-  test("should shows the correct icon", () => {
+  test("should displays the correct icon", () => {
     const text = "Siguiente";
     const mockIcon = <span>P</span>;
     render(
