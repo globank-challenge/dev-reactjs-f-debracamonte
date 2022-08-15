@@ -18,6 +18,7 @@ describe("<Home />", () => {
     cy.get("input").should("be.visible").type("gatochu{enter}");
     cy.wait(1000);
     cy.get(".searchbar__error").should("be.visible");
+    cy.wait(1000);
   });
   it("should displays a pokemon Card when clicks a pokemon", () => {
     cy.get(".card").first().should("be.visible").click();
