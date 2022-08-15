@@ -13,7 +13,7 @@ const Header = (): JSX.Element => {
         </h2>
       </div>
       <SearchBar
-        placeholder="Prueba buscando el nombre de tu pokemon favorito"
+        placeholder="Prueba buscando tu pokemon favorito"
         onSearch={setPokemonDetail}
       />
     </header>
