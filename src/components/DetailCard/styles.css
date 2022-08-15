@@ -16,7 +16,6 @@
 .detailCard__sprites {
   display: flex;
   gap: 8px;
-  justify-content: flex-start;
 }
 .detailCard__data {
   display: flex;
