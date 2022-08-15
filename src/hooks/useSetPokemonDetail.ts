@@ -1,14 +1,12 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { getPokemonDetail } from "../services/getPokemonDetail.service";
 import { setCurrentPokemon, setisActive } from "../redux/slices/pokemonDetails";
 import { setError } from "../redux/slices/errorHandler";
-import { RootState } from "../redux/store";
 import { ChangeEvent, useState } from "react";
 
 const useSetPokemonDetail = () => {
   const dispatch = useDispatch();
   const [inputValue, setInputValue] = useState("");
-  const pokeList = useSelector((state: RootState) => state.pokemonList);
 
   const onChangeHandler = (event: ChangeEvent<HTMLInputElement>): void => {
     setInputValue(event.target.value);
@@ -41,7 +39,6 @@ const useSetPokemonDetail = () => {
 
   return {
     setPokemonDetail,
-    pokeList,
     inputValue,
     onEnterHandler,
     onChangeHandler,
