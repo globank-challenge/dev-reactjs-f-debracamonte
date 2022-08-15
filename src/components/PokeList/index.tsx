@@ -2,9 +2,12 @@ import "./styles.css";
 import Card from "../Card";
 
 import useSetPokemonDetail from "../../hooks/useSetPokemonDetail";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
 
 const PokeList = (): JSX.Element => {
-  const { setPokemonDetail, pokeList } = useSetPokemonDetail();
+  const pokeList = useSelector((state: RootState) => state.pokemonList);
+  const { setPokemonDetail } = useSetPokemonDetail();
   return (
     <div className="pokeList">
       {pokeList.results.map((pokemon) => (
